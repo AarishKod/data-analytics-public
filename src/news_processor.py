@@ -26,8 +26,8 @@ class NewsProcessor:
             Pandas DataFrame with articles data
         """
         # TODO: Convert Article objects to DataFrame
-        # Each Article attribute should be a column
-        # Each article should be a row
+        # Each Article attribute will be a column
+        # Each article will be a row
 
         # TODO: Apply filtering if filter_func is provided
         if filter_func is not None:
@@ -89,11 +89,9 @@ class NewsProcessor:
         plt.tight_layout()  # Adjust layout to prevent label cutoff
         plt.show()
 
-        # Hints:
-        # - You may need to parse the published_at dates
-        # - Consider using case-insensitive search
-        # - matplotlib.pyplot can be used for plotting
 
+    
+    # TODO:
     def _extract_date_from_published_at(self, published_at: Optional[str]) -> Optional[datetime.date]:
         """
         Helper method to extract date from publishedAt timestamp.
