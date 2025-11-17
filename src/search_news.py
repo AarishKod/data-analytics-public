@@ -34,9 +34,6 @@ class SearchNews:
         """
 
         # TODO: Implement API call to /top-headlines endpoint
-        # Base URL: https://newsapi.org/v2/top-headlines
-        # Remember to include your API key in the request parameters
-        # Parse JSON response and create Article objects
         params = {
             'apiKey': self.__api_key,
         }
@@ -98,9 +95,6 @@ class SearchNews:
         if language:
             params["language"] = language
         # TODO: Implement API call to /everything endpoint
-        # Base URL: https://newsapi.org/v2/everything
-        # Remember to include your API key in the request parameters
-        # Parse JSON response and create Article objects
         list_of_articles: List[Article] = []
 
         response = requests.get("https://newsapi.org/v2/everything", params=params)
@@ -127,7 +121,6 @@ class SearchNews:
             Dictionary of JSON response
         """
         # TODO: Implement helper method for making API requests
-        # This can reduce code duplication between get_top_headlines and get_everything
 
 
         response = requests.get(f"https://newsapi.org/v2/{endpoint}", params=params)
